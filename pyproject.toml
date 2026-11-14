@@ -1,0 +1,21 @@
+[project]
+name = "gpx-elevation-fft"
+version = "0.1.0"
+description = "Parse GPX elevation traces, compute their FFT, and plot the spectrum in a Garmin-style chart."
+readme = "README.md"
+authors = [
+    { name = "Preston Huft", email = "gothrowayo@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.9.4",
+    "numpy>=2.0.2",
+    "pillow>=11.0.0",
+]
+
+[project.scripts]
+gpx-elevation-fft = "gpx_elevation_fft.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
